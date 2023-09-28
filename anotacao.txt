@@ -1,0 +1,18 @@
+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
+
+
+
+--data '{
+   "sender":{
+      "name":"Sender Alex",
+      "email":"senderalex@example.com"
+   },
+   "to":[
+      {
+         "email":"testmail@example.com",
+         "name":"John Doe"
+      }
+   ],
+   "subject":"Hello world",
+   "htmlContent":"<html><head></head><body><p>Hello,</p>This is my first transactional email sent from Brevo.</p></body></html>"
+}'

@@ -1,0 +1,28 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model RocketTeamMember {
+  id       String @id
+  name     String
+  function String
+}
+
+model UserJWT {
+  id        Int      @id @default(autoincrement())
+  firstname String
+  finalname String
+  email     String
+  password  String
+  createcAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  deletedAt DateTime @default(now())
+}
