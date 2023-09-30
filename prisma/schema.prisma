@@ -26,3 +26,19 @@ model UserJWT {
   updatedAt DateTime @updatedAt
   deletedAt DateTime @default(now())
 }
+
+model userCab {
+  id        Int       @id @default(autoincrement())
+  firstname String
+  finalname String
+  email     String
+  userDet   userDet[]
+}
+
+model userDet {
+  id          Int      @id @default(autoincrement())
+  UserCab     userCab? @relation(fields: [userCabId], references: [id])
+  userCabId   Int?
+  description String
+  phone       Int
+}
